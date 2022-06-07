@@ -17,6 +17,16 @@ code {
   padding-right: 1rem;
 }
 
+.todo__main {
+  margin-top: 50px;
+}
+
+.todos_empty {
+  text-align: center;
+  font-size: 16px;
+  line-height: 19px;
+}
+
 .todo {
   display: flex;
   padding: 10px 25px;
