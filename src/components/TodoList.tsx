@@ -19,7 +19,9 @@ const TodoList: React.FC<TodoListProps> = ({
     <ul>
       {todos.map((todo) => {
         const classes: Array<string> = ['todo'];
+
         if (todo.isChecked) classes.push('todo_checked');
+
         return (
           <li className={classes.join(' ')} key={todo.id}>
             <label>
