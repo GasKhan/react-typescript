@@ -11,12 +11,12 @@ const TodoList: React.FC<TodoListProps> = ({
   checkedHandler,
   deleteHandler,
 }) => {
-  if (!todos.length) {
-    return <p className="todos_empty">There is no todos here</p>;
-  }
+  // if (!todos.length) {
+  //   return <p className="todos_empty">There is no todos here</p>;
+  // }
 
   return (
-    <ul>
+    <ul data-testid="foo">
       {todos.map((todo) => {
         const classes: Array<string> = ['todo'];
 

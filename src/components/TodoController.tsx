@@ -28,6 +28,7 @@ const TodoController: React.FC<IControllerProps> = ({
             setSelectedFilter('all');
             allHandler();
           }}
+          data-testid="all"
         >
           All
         </button>
