@@ -12,25 +12,28 @@ const TodoForm: React.FC<TodoFormInterface> = (props) => {
 
   const keyPressHandler = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
-      props.addTodo(todoText);
-      setTodoText('');
+      if (todoText) {
+        props.addTodo(todoText);
+        setTodoText('');
+      }
     }
   };
 
   return (
     <div className="px1">
-      <form className="input-field" onSubmit={(e) => e.preventDefault()}>
+      <form
+        className="input-field custom-input-field"
+        onSubmit={(e) => e.preventDefault()}
+      >
         <input
           type="text"
           id="title"
-          placeholder="Input your text"
+          placeholder="What needs to be done?"
+          className="custom-input"
           value={todoText}
           onChange={(e) => changeHandler(e)}
           onKeyUp={(e) => keyPressHandler(e)}
         ></input>
-        <label htmlFor="title" className="active">
-          Input your text
-        </label>
       </form>
     </div>
   );
